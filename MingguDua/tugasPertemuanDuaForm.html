@@ -1,84 +1,96 @@
-<div class="input">     
-        <table>
-            <form id="formpendaftaran">
-            <tr>
-                <td>
-                    <label for="nama">Nama</label>
-                </td>
-                <td width="10">:</td>
-                <td>
-                    <input type="text" id="nama">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="email">Email</label>
-                </td>
-                <td>:</td>
-                <td>
-                    <input type="email" id="email">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="nomor">No. HP</label>
-                </td>
-                <td>:</td>
-                <td>
-                    <input type="number" id="nomor">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="alamat">Alamat</label>
-                </td>
-                <td>:</td>
-                <td>
-                    <input type="text" id="alamat">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <button type="submit" onclick="kliktombol()">
-                        Kirim
-                    </button> 
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <button type="reset">
-                        Reset
-                    </button> 
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <button type="button" onclick="alert">
-                        Info
-                    </button> 
-                </td>
-            </tr>
-            </form>
-        </table>
-    </div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran</title>
+    <style>
+      td {
+        padding: 5px;
+      }
+
+      #btn-kirim{
+        padding: 0.5rem 1rem;
+        margin-top: 2rem;
+        background: rgba(1, 167, 250, 0.8);
+        color: white;
+        border-radius: 10%;
+        border: 0;
+        box-shadow: 2px 2px 20px rgba(0,0,0,0.3);;
+      }
+
+    </style>
+  </head>
+  <body style="background-color: #f4f4f4; justify-content: center; align-items: center; min-height: 100vh; display: flex">
+    <form id="formpendaftaran" style="background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)">
+      <h1 align="center">Form Pendaftaran KIP-K</h1>
+      <table border="0">
+        <tr>
+          <td><label for="nama">Nama</label></td>
+          <td>:</td>
+          <td><input type="text" id="nama" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><label for="tanggal">Tanggal Lahir</label></td>
+          <td>:</td>
+          <td><input type="date" id="tanggal" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td>:</td>
+          <td><input type="email" id="email" /></td>
+        </tr>
+        <tr>
+          <td><label for="nomor">No. Hp</label></td>
+          <td>:</td>
+          <td><input type="number" id="nomor" /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password</label></td>
+          <td>:</td>
+          <td><input type="password" id="password" /></td>
+        </tr>
+        <tr>
+          <td><label for="jenjang">Jenjang</label></td>
+          <td>:</td>
+          <td><input type="radio" name="jenjang" value="s1" id="" />S1</td>
+          <td><input type="radio" name="jenjang" value="d4" id="" />D4</td>
+          <td><input type="radio" name="jenjang" value="d3" id="" />D3</td>
+        </tr>
+
+        <tr>
+          <td><label for="bantuan">Bantuan</label></td>
+          <td>:</td>
+          <td><input type="checkbox" name="bantuan" value="pip" />PIP</td>
+          <td><input type="checkbox" name="bantuan" value="kks" />KKS</td>
+          <td><input type="checkbox" name="bantuan" value="KIP" />KIP</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="right">
+            <button type="button" onclick="kliktombol()" id="btn-kirim">
+            Kirim
+            </button>
+        </td>
+        </tr>
+      </table>
+    </form>
 
     <script>
-        function kliktombol(){
-            var nama = document.querySelector   ('#nama').value;
-            var email = document.querySelector('#email').value;
-            var nomor = document.querySelector('#nomor').value;
-            var alamat = document.querySelector('#alamat').value;
+      function kliktombol() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
 
-            if(nama == "" || email == ""){
-                alert("Nama anda masih kosong");
-            }
-            else if(email == ""){
-                alert("email anda masih kosong");
-            }
-            else{
-                alert("Terimakasih telah mengisi form");
-            }
+        if (nama === "") {
+          alert("Nama anda masih kosong");
+        } else if (email === "") {
+          alert("Email anda masih kosong");
+        } else {
+          alert("Terima kasih " + nama + ", telah mengisi form!");
 
-            document.getElementById("formpendftaran").reset();
+          document.getElementById("formpendaftaran").reset();
         }
+      }
     </script>
+  </body>
+</html>
