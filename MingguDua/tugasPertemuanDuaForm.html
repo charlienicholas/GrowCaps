@@ -1,0 +1,84 @@
+<div class="input">     
+        <table>
+            <form id="formpendaftaran">
+            <tr>
+                <td>
+                    <label for="nama">Nama</label>
+                </td>
+                <td width="10">:</td>
+                <td>
+                    <input type="text" id="nama">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nomor">No. HP</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="number" id="nomor">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="alamat">Alamat</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="alamat">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="submit" onclick="kliktombol()">
+                        Kirim
+                    </button> 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="reset">
+                        Reset
+                    </button> 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="button" onclick="alert">
+                        Info
+                    </button> 
+                </td>
+            </tr>
+            </form>
+        </table>
+    </div>
+
+    <script>
+        function kliktombol(){
+            var nama = document.querySelector   ('#nama').value;
+            var email = document.querySelector('#email').value;
+            var nomor = document.querySelector('#nomor').value;
+            var alamat = document.querySelector('#alamat').value;
+
+            if(nama == "" || email == ""){
+                alert("Nama anda masih kosong");
+            }
+            else if(email == ""){
+                alert("email anda masih kosong");
+            }
+            else{
+                alert("Terimakasih telah mengisi form");
+            }
+
+            document.getElementById("formpendftaran").reset();
+        }
+    </script>
