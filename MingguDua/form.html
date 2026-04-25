@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <form id="formpendaftaran">
+        <tr>
+            <td>
+                <label for="nama">Nama</label>
+            </td>
+            <td width="10">:</td>
+            <td>
+                <input type="text" id="nama">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Email</label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="email" id="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="nim">NIM</label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="number" id="nim">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tanggal">Tanggal</label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="date" id="tanggal">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="pass">Password</label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="password" id="pass">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" onclick="kliktombol()">
+                    Kirim
+                </button> 
+            </td>
+            <td>
+                <button type="reset" >
+                    Reset
+                </button>
+            </td>
+        </tr>
+        </form>
+    </table>
+
+
+    <script>
+        function kliktombol(){
+            var nama = document.getElementById("nama").value;
+
+            if(nama == ""){
+                alert("Nama anda masih kosong");
+            }
+            else if(email == ""){
+                alert("email anda masih kosong");
+            }
+            else{
+                alert("Terimakasih telah mengisi form");
+            }
+
+            document.getElementById("formpendftaran").reset();
+        }
+    </script>
+</body>
+</html>
