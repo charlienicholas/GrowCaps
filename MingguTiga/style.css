@@ -34,7 +34,7 @@
 
 .container .card .box {
     display: flex;
-    justify-content: center;
+    justify-content: center;clear
     align-items: end;
     gap: 1rem;
 }
