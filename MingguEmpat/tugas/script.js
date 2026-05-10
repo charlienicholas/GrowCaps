@@ -20,7 +20,7 @@ addBtn.addEventListener("click", () => {
     `;
 
   // Menambahkan fungsi hapus pada tombol baru
-  li.querySelector(".delete-btn").addEventListener("click", function () {
+  li.querySelector(".delete-btn").addEventListener("click", () => {
     li.remove();
   });
 
@@ -32,7 +32,7 @@ addBtn.addEventListener("click", () => {
 });
 
 // Menambah tugas dengan menekan tombol Enter
-input.addEventListener("keypress", function (e) {
+input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     addBtn.click();
   }

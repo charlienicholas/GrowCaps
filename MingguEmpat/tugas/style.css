@@ -1,6 +1,6 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: Verdana, sans-serif;
+  background: rgba(0, 100, 255, 0.5);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@ body {
   background: white;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.2);
   width: 350px;
   text-align: center;
 }
@@ -36,7 +36,7 @@ input {
   outline: none;
 }
 
-button#add-btn {
+#add-btn {
   padding: 10px 15px;
   background-color: #5c67d1;
   color: white;
@@ -45,7 +45,7 @@ button#add-btn {
   cursor: pointer;
 }
 
-button#add-btn:hover {
+#add-btn:hover {
   background-color: #4a54b5;
 }
 
