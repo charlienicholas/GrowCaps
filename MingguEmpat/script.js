@@ -1,11 +1,14 @@
-let nama = "";
-let umur = 16;
+let nama;
+let kenalan;
+const umur = 16;
 
 function inputNama() {
-    nama = document.querySelector("#namaInput".);
+    let input = document.querySelector("#namaInput");
+    nama = input.value;
+    input.value = "";
+    kenalan = "Halo, nama saya " + nama + " dan umur saya " + umur + " tahun.";
 }
 
-let kenalan = "Halo, nama saya " + nama + " dan umur saya " + umur + " tahun.";
 
 function sapa() {
     alert(kenalan);
